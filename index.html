@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doriax Engine — Lightweight Open Source Game Engine for 2D &amp; 3D</title>
+    <meta name="description" content="Doriax Engine is a free, open-source, lightweight game engine for 2D and 3D games. Built with ECS and data-driven design for maximum performance and efficiency. Script in Lua or C++.">
+    <meta name="keywords" content="game engine, open source, lightweight, 2D, 3D, Lua, C++, cross-platform, ECS, entity component system, data-driven, performance">
+    <meta property="og:title" content="Doriax Engine — Lightweight Open Source Game Engine for 2D & 3D">
+    <meta property="og:description" content="A free, lightweight, and efficient game engine with data-driven ECS architecture. Build 2D and 3D games with Lua or C++ and deploy to 6 platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.doriax.org/">
+    <link rel="icon" type="image/png" href="logo/doriax_logo_image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <img src="logo/logo_part1.png" alt="Doriax Engine" class="nav-logo-icon">
+                <img src="logo/logo_part2.png" alt="Doriax" class="nav-logo-wordmark">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#editor">Editor</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#donate" class="nav-donate-btn">Donate</a></li>
+                <li><a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer" class="nav-github">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Open Source &amp; Free</div>
+                <h1 class="hero-title">
+                    Create games<br>
+                    <span class="hero-gradient">without limits</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A lightweight, efficient, and straightforward open-source game engine.
+                    Built with <strong>data-driven design</strong> and <strong>ECS architecture</strong>
+                    for maximum performance. Script in <strong>Lua</strong> or <strong>C++</strong>
+                    and deploy to 6 platforms.
+                </p>
+                <div class="hero-actions">
+                    <a href="#download" class="btn btn-primary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                    <a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        View on GitHub
+                    </a>
+                </div>
+                <div class="hero-platforms">
+                    <span class="hero-platforms-label">Available on</span>
+                    <div class="hero-platforms-icons">
+                        <span class="platform-tag">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            Windows
+                        </span>
+                        <span class="platform-tag">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.311.003-.465.01a10.001 10.001 0 0 0-8.063 4.588A10.103 10.103 0 0 0 2.24 9.192c-.18.838-.274 1.7-.274 2.57v.105c.008.467.039.934.091 1.398.271 2.428 1.353 4.674 3.074 6.371a10.152 10.152 0 0 0 2.588 1.953c.093.049.187.094.282.14.191.09.383.172.579.245.198.074.398.14.601.198.204.057.411.105.621.145.213.039.427.069.644.089.157.015.315.023.474.025h.128c.3-.003.596-.025.889-.063a8.804 8.804 0 0 0 1.469-.332c.153-.052.305-.11.454-.174.073-.031.146-.064.218-.099.345-.167.674-.363.984-.584.076-.054.152-.11.226-.168a7.81 7.81 0 0 0 1.117-1.107c.178-.213.344-.436.497-.668.131-.2.253-.406.364-.619.071-.136.138-.275.2-.416.033-.073.064-.146.093-.221a6.997 6.997 0 0 0 .368-1.227 8.07 8.07 0 0 0 .125-.974c.013-.176.02-.353.02-.53v-.049a8.39 8.39 0 0 0-.007-.261 7.6 7.6 0 0 0-.09-.983 8.196 8.196 0 0 0-.189-.856 7.526 7.526 0 0 0-.476-1.313 7.1 7.1 0 0 0-.559-.937c-.11-.157-.227-.307-.349-.452a6.76 6.76 0 0 0-.703-.707c-.355-.308-.742-.58-1.155-.81a7.127 7.127 0 0 0-.628-.305c-.045-.019-.09-.037-.136-.054a6.418 6.418 0 0 0-1.003-.308 7.024 7.024 0 0 0-1.073-.155 7.444 7.444 0 0 0-.573-.02 7.053 7.053 0 0 0-3.033.706 6.682 6.682 0 0 0-2.195 1.756 6.423 6.423 0 0 0-1.3 2.617 6.793 6.793 0 0 0-.236 1.79v.078a6.573 6.573 0 0 0 .154 1.377c.17.69.439 1.345.797 1.945.109.183.226.361.35.533.14.194.29.38.449.556.161.179.332.347.512.505.201.176.413.34.635.49a5.75 5.75 0 0 0 2.048.838c.244.054.494.09.747.107.14.01.28.015.42.015.098 0 .197-.002.295-.008a4.84 4.84 0 0 0 .716-.089c.133-.027.264-.06.393-.1a4.26 4.26 0 0 0 .502-.187 3.68 3.68 0 0 0 .41-.214l.158-.098c.077-.05.153-.103.226-.158l.123-.098c.029-.024.057-.05.084-.075a3.174 3.174 0 0 0 .448-.505c.048-.068.094-.138.135-.21a2.6 2.6 0 0 0 .216-.504 2.94 2.94 0 0 0 .105-.443c.02-.12.034-.24.041-.362a3.016 3.016 0 0 0-.027-.64 2.686 2.686 0 0 0-.156-.586 2.63 2.63 0 0 0-.197-.42c-.02-.033-.04-.066-.062-.098"/></svg>
+                            Linux
+                        </span>
+                        <span class="platform-tag">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            macOS
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-screenshot-wrapper">
+                    <img src="screenshots/editor-3d-scene.png" alt="Doriax Engine Editor - 3D Scene" class="hero-screenshot" loading="eager">
+                    <div class="hero-screenshot-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Capabilities</span>
+                <h2 class="section-title">Everything you need to<br><span class="text-gradient">bring your vision to life</span></h2>
+                <p class="section-subtitle">A lean engine built from the ground up with performance, efficiency, and simplicity at its core.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h3>2D &amp; 3D Engine</h3>
+                    <p>Full support for both 2D and 3D game development with lightweight, small output code. Sprites, tilemaps, 3D models, skeletal animation, and more — all in one lean, efficient workflow.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Built-in Editor</h3>
+                    <p>A powerful visual editor with scene hierarchy, properties inspector, animation timeline, code editor, and resource management — all integrated.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Lua &amp; C++</h3>
+                    <p>Use Lua for rapid prototyping and flexible scripting, or C++ for full performance — C++ scripts are compiled at buildtime, not runtime, for maximum efficiency. Combine both seamlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7-7h6m6 0h6"/><path d="M5.636 5.636l4.243 4.243m4.243 4.242l4.242 4.243M5.636 18.364l4.243-4.243m4.243-4.242l4.242-4.243"/></svg>
+                    </div>
+                    <h3>Entity Component System</h3>
+                    <p>Modern ECS with data-driven design at its core. Lean architecture that maximizes CPU cache performance while keeping the engine lightweight, efficient, and straightforward.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Write once, deploy to 6 platforms. Native support for Windows, Linux, macOS, Android, iOS, and HTML5 with OpenGL, Metal, and DirectX backends.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813h6.15l-4.975 3.615 1.9 5.812L12 14.625l-4.987 3.615 1.9-5.812L3.938 8.813h6.15z"/></svg>
+                    </div>
+                    <h3>PBR Rendering</h3>
+                    <p>Physically-based rendering with dynamic shadows, global illumination, fog, sky system, and advanced material support for photorealistic visuals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3>Physics Engine</h3>
+                    <p>Integrated 2D and 3D physics powered by Box2D and Jolt Physics. Rigid bodies, joints, collision detection, and more out of the box.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h3>Open Source &amp; Free</h3>
+                    <p>MIT licensed, completely free for personal and commercial use. No royalties, no strings attached. Developers who adopt the engine will receive full support, with improvements delivered as quickly as possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editor Showcase -->
+    <section class="section editor-showcase" id="editor">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visual Editor</span>
+                <h2 class="section-title">A complete editor<br><span class="text-gradient">built for creators</span></h2>
+                <p class="section-subtitle">Design scenes, write code, animate characters, and test your game — all from one unified environment.</p>
+            </div>
+            <div class="editor-features">
+                <div class="editor-feature-tabs">
+                    <button class="editor-tab active" data-tab="3d">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        3D Scenes
+                    </button>
+                    <button class="editor-tab" data-tab="2d">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="7" y="7" width="10" height="10"/></svg>
+                        2D &amp; Tilemaps
+                    </button>
+                    <button class="editor-tab" data-tab="animation">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                        Animation
+                    </button>
+                    <button class="editor-tab" data-tab="code">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        Code Editor
+                    </button>
+                    <button class="editor-tab" data-tab="ui">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        UI System
+                    </button>
+                </div>
+                <div class="editor-preview">
+                    <div class="editor-preview-image active" data-tab="3d">
+                        <img src="screenshots/editor-3d-scene.png" alt="3D Scene editing in Doriax Engine" loading="lazy">
+                    </div>
+                    <div class="editor-preview-image" data-tab="2d">
+                        <img src="screenshots/editor-2d-tilemap.png" alt="2D Tilemap editing in Doriax Engine" loading="lazy">
+                    </div>
+                    <div class="editor-preview-image" data-tab="animation">
+                        <img src="screenshots/editor-animation.png" alt="Animation timeline in Doriax Engine" loading="lazy">
+                    </div>
+                    <div class="editor-preview-image" data-tab="code">
+                        <img src="screenshots/editor-code.png" alt="Integrated code editor in Doriax Engine" loading="lazy">
+                    </div>
+                    <div class="editor-preview-image" data-tab="ui">
+                        <img src="screenshots/editor-ui.png" alt="UI design tools in Doriax Engine" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats/Highlights -->
+    <section class="section highlights">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <div class="highlight-number">6+</div>
+                    <div class="highlight-label">Target Platforms</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-number">2</div>
+                    <div class="highlight-label">Scripting Languages</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-number">3</div>
+                    <div class="highlight-label">Graphics APIs</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-number">MIT</div>
+                    <div class="highlight-label">License</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Gallery</span>
+                <h2 class="section-title">See the engine<br><span class="text-gradient">in action</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-full="screenshots/editor-3d-scene.png">
+                    <img src="screenshots/editor-3d-scene.png" alt="3D Scene with models and terrain" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>3D Scene</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-bones.png">
+                    <img src="screenshots/editor-bones.png" alt="Skeletal animation and bone editing" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Bone System</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-animation.png">
+                    <img src="screenshots/editor-animation.png" alt="Animation timeline editor" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Animation Timeline</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-camera.png">
+                    <img src="screenshots/editor-camera.png" alt="Camera and build system" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Camera &amp; Build</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-2d-tilemap.png">
+                    <img src="screenshots/editor-2d-tilemap.png" alt="2D Tilemap editor" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>2D Tilemap</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-sprite-slicer.png">
+                    <img src="screenshots/editor-sprite-slicer.png" alt="Sprite slicer tool" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Sprite Slicer</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-code.png">
+                    <img src="screenshots/editor-code.png" alt="Integrated code editor" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Code Editor</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-3d-play.png">
+                    <img src="screenshots/editor-3d-play.png" alt="3D game running with UI overlay" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Play Mode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous">&#8249;</button>
+        <button class="lightbox-next" aria-label="Next">&#8250;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <section class="section download" id="download">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get Started</span>
+                <h2 class="section-title">Download<br><span class="text-gradient">Doriax Engine</span></h2>
+                <p class="section-subtitle">Free and open source. No sign-up required. Start building your game today.</p>
+            </div>
+            <div class="download-cards">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                    </div>
+                    <h3>Windows</h3>
+                    <p class="download-meta">Windows 10+ &bull; x64</p>
+                    <a href="#" class="btn btn-primary btn-download" onclick="event.preventDefault(); alert('Downloads will be available when Doriax Engine v1.0 is released.');">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download for Windows
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon linux-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.311.003-.465.01a10.001 10.001 0 0 0-8.063 4.588A10.103 10.103 0 0 0 2.24 9.192c-.18.838-.274 1.7-.274 2.57v.105c.008.467.039.934.091 1.398.271 2.428 1.353 4.674 3.074 6.371a10.152 10.152 0 0 0 2.588 1.953c.093.049.187.094.282.14.191.09.383.172.579.245.198.074.398.14.601.198.204.057.411.105.621.145.213.039.427.069.644.089.157.015.315.023.474.025h.128c.3-.003.596-.025.889-.063a8.804 8.804 0 0 0 1.469-.332c.153-.052.305-.11.454-.174.073-.031.146-.064.218-.099.345-.167.674-.363.984-.584.076-.054.152-.11.226-.168a7.81 7.81 0 0 0 1.117-1.107c.178-.213.344-.436.497-.668.131-.2.253-.406.364-.619.071-.136.138-.275.2-.416.033-.073.064-.146.093-.221a6.997 6.997 0 0 0 .368-1.227 8.07 8.07 0 0 0 .125-.974c.013-.176.02-.353.02-.53v-.049a8.39 8.39 0 0 0-.007-.261 7.6 7.6 0 0 0-.09-.983 8.196 8.196 0 0 0-.189-.856 7.526 7.526 0 0 0-.476-1.313 7.1 7.1 0 0 0-.559-.937c-.11-.157-.227-.307-.349-.452a6.76 6.76 0 0 0-.703-.707c-.355-.308-.742-.58-1.155-.81a7.127 7.127 0 0 0-.628-.305c-.045-.019-.09-.037-.136-.054a6.418 6.418 0 0 0-1.003-.308 7.024 7.024 0 0 0-1.073-.155 7.444 7.444 0 0 0-.573-.02 7.053 7.053 0 0 0-3.033.706 6.682 6.682 0 0 0-2.195 1.756 6.423 6.423 0 0 0-1.3 2.617 6.793 6.793 0 0 0-.236 1.79v.078a6.573 6.573 0 0 0 .154 1.377c.17.69.439 1.345.797 1.945.109.183.226.361.35.533.14.194.29.38.449.556.161.179.332.347.512.505.201.176.413.34.635.49a5.75 5.75 0 0 0 2.048.838c.244.054.494.09.747.107.14.01.28.015.42.015.098 0 .197-.002.295-.008a4.84 4.84 0 0 0 .716-.089c.133-.027.264-.06.393-.1a4.26 4.26 0 0 0 .502-.187 3.68 3.68 0 0 0 .41-.214l.158-.098c.077-.05.153-.103.226-.158l.123-.098c.029-.024.057-.05.084-.075a3.174 3.174 0 0 0 .448-.505c.048-.068.094-.138.135-.21a2.6 2.6 0 0 0 .216-.504 2.94 2.94 0 0 0 .105-.443c.02-.12.034-.24.041-.362a3.016 3.016 0 0 0-.027-.64 2.686 2.686 0 0 0-.156-.586 2.63 2.63 0 0 0-.197-.42c-.02-.033-.04-.066-.062-.098"/></svg>
+                    </div>
+                    <h3>Linux</h3>
+                    <p class="download-meta">Ubuntu 22.04+ &bull; x64</p>
+                    <a href="#" class="btn btn-primary btn-download" onclick="event.preventDefault(); alert('Downloads will be available when Doriax Engine v1.0 is released.');">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download for Linux
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon macos-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    </div>
+                    <h3>macOS</h3>
+                    <p class="download-meta">macOS 12+ &bull; Universal</p>
+                    <a href="#" class="btn btn-primary btn-download" onclick="event.preventDefault(); alert('Downloads will be available when Doriax Engine v1.0 is released.');">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download for macOS
+                    </a>
+                </div>
+            </div>
+            <p class="download-note">
+                You can also <a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer">build from source</a> for any platform.
+            </p>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section class="section donate" id="donate">
+        <div class="donate-bg">
+            <div class="donate-glow"></div>
+        </div>
+        <div class="container">
+            <div class="donate-content">
+                <div class="donate-text">
+                    <span class="section-tag">Support Development</span>
+                    <h2 class="section-title">Help Doriax Engine<br><span class="text-gradient">grow stronger</span></h2>
+                    <p>Doriax Engine is built by a passionate developer committed to providing full support to every adopter. Your donation helps fund development, infrastructure, and keeps the engine free and open source for everyone.</p>
+                    <p>Every contribution — no matter the size — helps deliver improvements as quickly as possible.</p>
+                </div>
+                <div class="donate-actions">
+                    <a href="https://github.com/sponsors/supernovaengine" target="_blank" rel="noopener noreferrer" class="btn btn-donate btn-lg">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        Sponsor on GitHub
+                    </a>
+                    <div class="donate-alternatives">
+                        <span>Other ways to contribute:</span>
+                        <div class="donate-links">
+                            <a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer">Contribute Code</a>
+                            <a href="https://github.com/doriaxengine/doriax/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
+                            <a href="https://discord.gg/yXXDyJf3gT" target="_blank" rel="noopener noreferrer">Join Discord</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo/doriax_logo_transparent.png" alt="Doriax Engine" class="footer-logo-img">
+                    </div>
+                    <p>A free, lightweight, and efficient open-source game engine for creating 2D and 3D games with Lua or C++.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://discord.gg/yXXDyJf3gT" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Engine</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#editor">Editor</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://discord.gg/yXXDyJf3gT" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legacy</h4>
+                    <ul>
+                        <li><a href="https://www.supernovaengine.org/" target="_blank" rel="noopener noreferrer">Supernova Engine</a></li>
+                        <li><a href="https://github.com/supernovaengine/supernova" target="_blank" rel="noopener noreferrer">Supernova Source</a></li>
+                        <li><a href="https://docs.supernovaengine.org/" target="_blank" rel="noopener noreferrer">Legacy Docs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Doriax Engine. Open source under the <a href="https://mit-license.org/" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
