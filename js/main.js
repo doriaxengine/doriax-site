@@ -20,17 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 
+    function closeMobileMenu() {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
     navToggle.addEventListener('click', () => {
         navLinks.classList.toggle('open');
-        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+        navToggle.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     // Close mobile menu on link click
     navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            document.body.style.overflow = '';
-        });
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Reset mobile menu state on viewport resize past mobile breakpoint
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+            closeMobileMenu();
+        }
     });
 
     // --- Editor tabs ---
@@ -107,8 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (lightbox.classList.contains('active')) return closeLightbox();
+            if (navLinks.classList.contains('open')) return closeMobileMenu();
+        }
         if (!lightbox.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft') prevImage();
         if (e.key === 'ArrowRight') nextImage();
     });
