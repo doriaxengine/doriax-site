@@ -27,7 +27,7 @@
     --accent-3: #38d0ff;
     /* Shade used for highlighted heading text (easy to tweak/preview) */
     --accent-text: #4b93ff;
-    --accent-gradient: linear-gradient(120deg, #2f6bff 0%, #38d0ff 100%);
+    --accent-gradient: linear-gradient(135deg, #2f6bff 0%, #57a5ff 100%);
     --accent-glow: rgba(47, 107, 255, 0.35);
 
     --donate-color: #ff8a3d;
@@ -854,7 +854,7 @@ a:hover {
 }
 
 .download-icon {
-    color: var(--accent-2);
+    color: var(--text-primary);
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
