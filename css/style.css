@@ -25,6 +25,8 @@
     --accent-1: #2f6bff;
     --accent-2: #6da0ff;
     --accent-3: #38d0ff;
+    /* Shade used for highlighted heading text (easy to tweak/preview) */
+    --accent-text: #4b93ff;
     --accent-gradient: linear-gradient(120deg, #2f6bff 0%, #38d0ff 100%);
     --accent-glow: rgba(47, 107, 255, 0.35);
 
@@ -152,7 +154,7 @@ a:hover {
 }
 
 .text-gradient {
-    color: var(--accent-3);
+    color: var(--accent-text);
 }
 
 /* --- Buttons --- */
@@ -377,8 +379,8 @@ a:hover {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 64px;
+    grid-template-columns: 1fr 1.12fr;
+    gap: 48px;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -403,15 +405,16 @@ a:hover {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.1rem);
+    font-size: clamp(2.1rem, 4.4vw, 3.5rem);
     font-weight: 900;
-    line-height: 1.06;
+    line-height: 1.08;
     letter-spacing: -0.045em;
     margin-bottom: 24px;
+    white-space: nowrap;
 }
 
 .hero-gradient {
-    color: var(--accent-3);
+    color: var(--accent-text);
 }
 
 .hero-subtitle {
@@ -474,30 +477,6 @@ a:hover {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-hover);
-}
-
-.hero-screenshot-wrapper::before,
-.hero-screenshot-wrapper::after {
-    content: '';
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.hero-screenshot-wrapper::before {
-    top: 10px;
-    left: 10px;
-    border-top: 2px solid var(--accent-3);
-    border-left: 2px solid var(--accent-3);
-}
-
-.hero-screenshot-wrapper::after {
-    bottom: 10px;
-    right: 10px;
-    border-bottom: 2px solid var(--accent-3);
-    border-right: 2px solid var(--accent-3);
 }
 
 .hero-screenshot {
@@ -698,7 +677,7 @@ a:hover {
 .highlight-number {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
-    color: var(--accent-3);
+    color: var(--accent-text);
     line-height: 1.2;
     margin-bottom: 8px;
 }
@@ -1288,7 +1267,7 @@ a:hover {
     }
 
     .hero-title {
-        font-size: clamp(2rem, 8vw, 3rem);
+        font-size: clamp(1.55rem, 7.4vw, 3rem);
     }
 }
 
