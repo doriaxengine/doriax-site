@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doriax Engine — Lightweight Open Source Game Engine for 2D &amp; 3D</title>
-    <meta name="description" content="Doriax Engine is a free, open-source, lightweight game engine for 2D and 3D games. Built with ECS and data-driven design for maximum performance and efficiency. Script in Lua or C++.">
-    <meta name="keywords" content="game engine, open source, lightweight, 2D, 3D, Lua, C++, cross-platform, ECS, entity component system, data-driven, performance">
+    <meta name="description" content="Doriax Engine is a free, open-source, lightweight game engine for 2D and 3D games. Built with ECS and data-driven design for maximum performance and efficiency. Script in Lua or C++, with a built-in AI assistant in the editor.">
+    <meta name="keywords" content="game engine, open source, lightweight, 2D, 3D, Lua, C++, cross-platform, ECS, entity component system, data-driven, performance, AI assistant, AI game engine">
     <meta property="og:title" content="Doriax Engine — Lightweight Open Source Game Engine for 2D & 3D">
     <meta property="og:description" content="A free, lightweight, and efficient game engine with data-driven ECS architecture. Build 2D and 3D games with Lua or C++ and deploy to 6 platforms.">
     <meta property="og:type" content="website">
@@ -107,7 +107,7 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-screenshot-wrapper">
-                    <img src="screenshots/editor-3d-scene.png" alt="Doriax Engine Editor - 3D Scene" class="hero-screenshot" loading="eager">
+                    <img src="screenshots/editor-office-scene.png" alt="Doriax Engine Editor - PBR office scene" class="hero-screenshot" loading="eager">
                     <div class="hero-screenshot-glow"></div>
                 </div>
             </div>
@@ -136,6 +136,13 @@
                     </div>
                     <h3>Built-in Editor</h3>
                     <p>A powerful visual editor with scene hierarchy, properties inspector, animation timeline, code editor, and resource management — all integrated.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3l1.6 4.4L15 9l-4.4 1.6L9 15l-1.6-4.4L3 9l4.4-1.6z"/><path d="M18 13l.9 2.1 2.1.9-2.1.9L18 19l-.9-2.1L15 16l2.1-.9z"/></svg>
+                    </div>
+                    <h3>AI Assistant</h3>
+                    <p>A built-in AI chat that acts as an agent inside the editor. Describe what you want in plain language and it creates entities, writes and edits Lua or C++ scripts, and builds your project — right where you work.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -189,7 +196,7 @@
             <div class="section-header">
                 <span class="section-tag">Visual Editor</span>
                 <h2 class="section-title">A complete editor<br><span class="text-gradient">built for creators</span></h2>
-                <p class="section-subtitle">Design scenes, write code, animate characters, and test your game — all from one unified environment.</p>
+                <p class="section-subtitle">Design scenes, write code, animate characters, and test your game — with a built-in AI assistant at your side, all from one unified environment.</p>
             </div>
             <div class="editor-features">
                 <div class="editor-feature-tabs">
@@ -213,22 +220,29 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
                         UI System
                     </button>
+                    <button class="editor-tab" data-tab="ai">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3l1.6 4.4L15 9l-4.4 1.6L9 15l-1.6-4.4L3 9l4.4-1.6z"/><path d="M18 13l.9 2.1 2.1.9-2.1.9L18 19l-.9-2.1L15 16l2.1-.9z"/></svg>
+                        AI Assistant
+                    </button>
                 </div>
                 <div class="editor-preview">
                     <div class="editor-preview-image active" data-tab="3d">
-                        <img src="screenshots/editor-3d-scene.png" alt="3D Scene editing in Doriax Engine" loading="lazy">
+                        <img src="screenshots/editor-lighting.png" alt="3D scene lighting and shadows in Doriax Engine" loading="lazy">
                     </div>
                     <div class="editor-preview-image" data-tab="2d">
                         <img src="screenshots/editor-2d-tilemap.png" alt="2D Tilemap editing in Doriax Engine" loading="lazy">
                     </div>
                     <div class="editor-preview-image" data-tab="animation">
-                        <img src="screenshots/editor-animation.png" alt="Animation timeline in Doriax Engine" loading="lazy">
+                        <img src="screenshots/editor-bones.png" alt="Skeletal animation and bones in Doriax Engine" loading="lazy">
                     </div>
                     <div class="editor-preview-image" data-tab="code">
                         <img src="screenshots/editor-code-spROPERTY.png" alt="C++ scripting with editor-exposed properties in Doriax Engine" loading="lazy">
                     </div>
                     <div class="editor-preview-image" data-tab="ui">
                         <img src="screenshots/runtime-first-ui-scene.png" alt="UI design tools in Doriax Engine" loading="lazy">
+                    </div>
+                    <div class="editor-preview-image" data-tab="ai">
+                        <img src="screenshots/editor-ai-chat.png" alt="AI assistant creating entities and scripts in Doriax Engine" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -267,6 +281,42 @@
                 <h2 class="section-title">See the engine<br><span class="text-gradient">in action</span></h2>
             </div>
             <div class="gallery-grid">
+                <div class="gallery-item" data-full="screenshots/editor-ai-chat.png">
+                    <img src="screenshots/editor-ai-chat.png" alt="AI assistant creating entities and scripts in the editor" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>AI Assistant</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-office-scene.png">
+                    <img src="screenshots/editor-office-scene.png" alt="PBR-lit office scene in the editor" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>PBR Office Scene</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-reflections.png">
+                    <img src="screenshots/editor-reflections.png" alt="Screen-space reflections settings" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Reflections (SSR)</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-global-illumination.png">
+                    <img src="screenshots/editor-global-illumination.png" alt="Global illumination and lighting settings" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Global Illumination</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-lighting.png">
+                    <img src="screenshots/editor-lighting.png" alt="Directional light and dynamic shadow settings" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Dynamic Lighting</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full="screenshots/editor-custom-layout.png">
+                    <img src="screenshots/editor-custom-layout.png" alt="Customizable editor panel layout" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Customizable Layout</span>
+                    </div>
+                </div>
                 <div class="gallery-item" data-full="screenshots/editor-3d-scene.png">
                     <img src="screenshots/editor-3d-scene.png" alt="3D Scene with models and terrain" loading="lazy">
                     <div class="gallery-overlay">
@@ -277,12 +327,6 @@
                     <img src="screenshots/editor-bones.png" alt="Skeletal animation and bone editing" loading="lazy">
                     <div class="gallery-overlay">
                         <span>Bone System</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-full="screenshots/editor-animation.png">
-                    <img src="screenshots/editor-animation.png" alt="Animation timeline editor" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Animation Timeline</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-full="screenshots/editor-camera.png">
@@ -331,12 +375,6 @@
                     <img src="screenshots/runtime-first-ui-scene.png" alt="Game UI design in editor" loading="lazy">
                     <div class="gallery-overlay">
                         <span>UI Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-full="screenshots/editor-3d-play.png">
-                    <img src="screenshots/editor-3d-play.png" alt="3D game running with UI overlay" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Play Mode</span>
                     </div>
                 </div>
             </div>
