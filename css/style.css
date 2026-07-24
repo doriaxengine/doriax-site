@@ -299,10 +299,13 @@ a:hover {
     background: linear-gradient(135deg, var(--donate-color), var(--donate-hover)) !important;
 }
 
-.nav-github {
+.nav-icon-link {
     display: flex !important;
     align-items: center;
-    padding: 8px !important;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0 !important;
 }
 
 .nav-toggle {
@@ -493,6 +496,103 @@ a:hover {
     opacity: 0.15;
     z-index: -1;
     filter: blur(30px);
+}
+
+/* ==============================
+   Intro Video
+   ============================== */
+.video-section {
+    background: var(--bg-primary);
+}
+
+.video-embed {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border-hover);
+    box-shadow: var(--shadow-lg);
+    background: var(--bg-card);
+    cursor: pointer;
+}
+
+/* Scrim so the play button keeps contrast over any frame */
+.video-embed::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(6, 10, 20, 0.28) 0%, rgba(6, 10, 20, 0.1) 55%, rgba(6, 10, 20, 0.45) 100%);
+    transition: opacity var(--transition);
+}
+
+.video-embed:hover::before {
+    opacity: 0.75;
+}
+
+.video-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.video-embed:hover .video-poster {
+    transform: scale(1.03);
+}
+
+.video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6px; /* optically centers the triangle */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    background: var(--accent-gradient);
+    box-shadow: 0 10px 40px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transition: all var(--transition);
+}
+
+.video-embed:hover .video-play,
+.video-play:focus-visible {
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 16px 52px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Once the YouTube player is swapped in, drop the poster treatment */
+.video-embed.loaded {
+    cursor: default;
+}
+
+.video-embed.loaded::before {
+    content: none;
+}
+
+.video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 24px;
 }
 
 /* ==============================
@@ -1224,6 +1324,21 @@ a:hover {
     .nav-links a {
         font-size: 1.2rem;
         padding: 12px 24px;
+    }
+
+    .nav-icon-link {
+        width: 48px;
+        height: 48px;
+    }
+
+    .video-play {
+        width: 64px;
+        height: 64px;
+    }
+
+    .video-play svg {
+        width: 26px;
+        height: 26px;
     }
 
     .features-grid {

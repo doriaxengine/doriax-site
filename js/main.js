@@ -68,6 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Intro video (load the YouTube player only on click) ---
+    const videoEmbed = document.getElementById('videoEmbed');
+
+    if (videoEmbed) {
+        videoEmbed.addEventListener('click', () => {
+            if (videoEmbed.classList.contains('loaded')) return;
+
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube-nocookie.com/embed/${videoEmbed.dataset.videoId}?autoplay=1&rel=0`;
+            iframe.title = videoEmbed.dataset.videoTitle || 'Doriax Engine introduction video';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowFullscreen = true;
+
+            videoEmbed.classList.add('loaded');
+            videoEmbed.replaceChildren(iframe);
+        });
+    }
+
     // --- Gallery lightbox ---
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
