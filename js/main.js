@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset mobile menu state on viewport resize past mobile breakpoint
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+        if (window.innerWidth > 1024 && navLinks.classList.contains('open')) {
             closeMobileMenu();
         }
     });
