@@ -25,6 +25,9 @@
     --accent-1: #2f6bff;
     --accent-2: #6da0ff;
     --accent-3: #38d0ff;
+
+    --accent-secondary-1: #ffff00;
+    --accent-secondary-2: #aaaa0033;
     /* Shade used for highlighted heading text (easy to tweak/preview) */
     --accent-text: #4b93ff;
     --accent-gradient: linear-gradient(135deg, #2f6bff 0%, #57a5ff 100%);
@@ -415,6 +418,24 @@ a:hover {
     background: rgba(56, 208, 255, 0.08);
     border: 1px solid rgba(56, 208, 255, 0.22);
     border-left: 3px solid var(--accent-3);
+    padding: 7px 16px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 26px;
+}
+
+.hero-badge-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-secondary-1);
+    background: var(--accent-secondary-2);
+    border: 1px solid rgba(var(--accent-secondary-1), 0.5);
+    border-left: 3px solid var(--accent-secondary-1);
     padding: 7px 16px;
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     margin-bottom: 26px;
