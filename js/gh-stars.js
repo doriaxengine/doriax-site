@@ -1,9 +1,11 @@
-// Ждем полной загрузки HTML, чтобы элемент точно существовал
 document.addEventListener("DOMContentLoaded", () => {
     const githubUsername = 'doriaxengine'; 
     const githubRepo = 'doriax';
     const starsCounter = document.getElementById('gh-stars-counter');
+    
+    const prefix = "Stars: ";
     const starsEmoticon = '⭐';
+    const errorEmoticon = '💔';
     if (!starsCounter) {
         console.error("No element found with ID 'gh-stars-counter'.");
         return;
@@ -21,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(data => {
             console.log("Stars fetched:", data.stargazers_count);
-            starsCounter.innerText = `${data.stargazers_count}${starsEmoticon}`;
+            starsCounter.innerHTML = `${prefix}${data.stargazers_count}${starsEmoticon}`;
         })
         .catch(error => {
             console.error("Error fetching stars:", error);
-            starsCounter.innerText = '💔'; 
+            starsCounter.innerHTML = `${errorEmoticon}`; 
         });
 });
