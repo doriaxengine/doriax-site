@@ -216,6 +216,19 @@ a:hover {
     color: #fff;
 }
 
+.btn-donate-outline {
+    background: rgba(255, 138, 61, 0.08);
+    color: var(--donate-hover);
+    border: 1px solid rgba(255, 138, 61, 0.35);
+}
+
+.btn-donate-outline:hover {
+    background: rgba(255, 138, 61, 0.14);
+    border-color: rgba(255, 138, 61, 0.55);
+    color: var(--donate-hover);
+    transform: translateY(-2px);
+}
+
 /* ==============================
    Navigation
    ============================== */
@@ -1066,6 +1079,12 @@ a:hover {
     align-items: flex-start;
 }
 
+.donate-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 .donate-alternatives {
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -1265,6 +1284,10 @@ a:hover {
 
     .donate-actions {
         align-items: center;
+    }
+
+    .donate-buttons {
+        justify-content: center;
     }
 
     .footer-grid {
