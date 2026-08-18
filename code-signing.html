@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Signing Policy — Doriax Engine</title>
+    <meta name="description" content="How Doriax Engine release binaries are code-signed, who may authorize a signature, and how to verify a download.">
+    <link rel="canonical" href="https://www.doriax.org/code-signing.html">
+    <link rel="icon" type="image/png" href="logo/logo_part1.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar legal-navbar" aria-label="Primary navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Doriax Engine home">
+                <img src="logo/logo_part1.png" alt="" class="nav-logo-icon">
+                <img src="logo/logo_part2.png" alt="Doriax" class="nav-logo-wordmark">
+            </a>
+            <a href="index.html" class="legal-back-link">Back to home</a>
+        </div>
+    </nav>
+
+    <main class="legal-page">
+        <div class="container legal-container">
+            <header class="legal-header">
+                <span class="section-tag">Legal</span>
+                <h1>Code Signing Policy</h1>
+                <p class="legal-intro">This page explains how Doriax Engine binaries are signed, who can authorize a signature, and how you can check a download yourself.</p>
+                <p class="legal-meta">Effective and last updated: August 18, 2026</p>
+            </header>
+
+            <article class="legal-content">
+                <div class="legal-summary">
+                    <p><strong>Attribution</strong></p>
+                    <p>Free code signing provided by <a href="https://about.signpath.io" target="_blank" rel="noopener noreferrer">SignPath.io</a>, certificate by <a href="https://signpath.org" target="_blank" rel="noopener noreferrer">SignPath Foundation</a>.</p>
+                </div>
+
+                <section aria-labelledby="what-is-signed">
+                    <h2 id="what-is-signed">1. What is signed</h2>
+                    <p>Windows release binaries published by the Doriax Engine project carry an Authenticode signature. This covers the editor executable, its command-line companion, and the engine runtime library that ships beside them. Signing was introduced in August 2026; builds published before then are unsigned.</p>
+                    <p>macOS and Linux builds are not signed at this time. Builds you compile yourself from source are unsigned, which is expected and not a sign of tampering.</p>
+                </section>
+
+                <section aria-labelledby="how-signed">
+                    <h2 id="how-signed">2. How binaries are signed</h2>
+                    <p>Binaries are built by GitHub Actions from the public <a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer">doriaxengine/doriax</a> repository. The workflow that produces them is part of that repository and is reviewed like any other source change.</p>
+                    <p>Signing happens after the build, on SignPath&apos;s infrastructure. The private key is held by SignPath and is never present on a build machine, on a maintainer&apos;s computer, or in the repository. SignPath records the repository, branch, and commit behind every signature, so each signed binary can be traced back to the source it was built from.</p>
+                    <p>Released binaries are signed under a certificate held by SignPath Foundation, which provides code signing free of charge to open-source projects. Because the certificate is issued to the Foundation rather than to this project, Windows shows <strong>SignPath Foundation</strong> as the publisher of Doriax Engine binaries. That is expected and correct. Development builds may instead carry a test signature, which is not trusted by Windows and is not intended for distribution.</p>
+                </section>
+
+                <section aria-labelledby="roles">
+                    <h2 id="roles">3. Who can request and approve a signature</h2>
+                    <p>The Doriax Engine project is maintained by Eduardo Doria, who is the sole committer with write access to the repository and the sole approver of signing requests. Contributions from other people arrive as pull requests and are reviewed before they can become part of a signed build.</p>
+                    <p>Signing requests can only be submitted by the project&apos;s continuous integration workflow, and only for builds of this repository. Repository and SignPath access are protected with multi-factor authentication.</p>
+                </section>
+
+                <section aria-labelledby="verify">
+                    <h2 id="verify">4. Verifying a download</h2>
+                    <p>On Windows, right-click the downloaded <code>.exe</code>, choose <strong>Properties</strong>, and open the <strong>Digital Signatures</strong> tab. A genuine release shows a valid signature from <strong>SignPath Foundation</strong>, for the reason explained above. If that tab is missing, or the signature does not validate, do not run the file.</p>
+                    <p>Antivirus products occasionally flag newly published, low-circulation binaries even when they are correctly signed. If that happens, please <a href="https://github.com/doriaxengine/doriax/issues" target="_blank" rel="noopener noreferrer">open an issue</a> so it can be reported to the vendor.</p>
+                </section>
+
+                <section aria-labelledby="privacy-contact">
+                    <h2 id="privacy-contact">5. Privacy and contact</h2>
+                    <p>Information handling for the Doriax website and software is described in the <a href="privacy.html">Privacy Policy</a>.</p>
+                    <p>To report a suspicious binary claiming to be Doriax, or any concern about a signature, email <a href="mailto:studio@doriax.org">studio@doriax.org</a>.</p>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer legal-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Eduardo Doria. <a href="index.html">Doriax Engine home</a> &middot; <a href="https://github.com/doriaxengine/doriax" target="_blank" rel="noopener noreferrer">Source code</a></p>
+        </div>
+    </footer>
+</body>
+</html>
