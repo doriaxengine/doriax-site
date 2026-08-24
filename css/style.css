@@ -990,6 +990,18 @@ a:hover {
     justify-content: center;
 }
 
+.download-alt {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.download-alt code {
+    font-size: 0.95em;
+    color: var(--text-secondary);
+}
+
 .download-warning {
     display: flex;
     align-items: flex-start;
