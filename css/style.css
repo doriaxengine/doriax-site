@@ -785,7 +785,7 @@ a:hover {
 }
 
 .download-icon {
-    color: var(--accent-2);
+    color: var(--text-primary);
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
