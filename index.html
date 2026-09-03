@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" href="logo/logo_part1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2G3S99SDC"></script>
@@ -60,11 +60,6 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-bg-effects">
-            <div class="hero-glow hero-glow-1"></div>
-            <div class="hero-glow hero-glow-2"></div>
-            <div class="hero-grid"></div>
-        </div>
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">Open Source &amp; Free</div>
@@ -113,7 +108,6 @@
             <div class="hero-visual">
                 <div class="hero-screenshot-wrapper">
                     <img src="screenshots/editor-3d-scene3.png" alt="Doriax Engine Editor - 3D pirate adventure scene" class="hero-screenshot" loading="eager">
-                    <div class="hero-screenshot-glow"></div>
                 </div>
             </div>
         </div>
@@ -150,65 +144,38 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                    </div>
                     <h3>2D &amp; 3D Engine</h3>
                     <p>Full support for both 2D and 3D game development with lightweight, small output code. Sprites, tilemaps, 3D models, skeletal animation, and more — all in one lean, efficient workflow.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
                     <h3>Built-in Editor</h3>
                     <p>A powerful visual editor with scene hierarchy, properties inspector, animation timeline, code editor, and resource management — all integrated.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3l1.6 4.4L15 9l-4.4 1.6L9 15l-1.6-4.4L3 9l4.4-1.6z"/><path d="M18 13l.9 2.1 2.1.9-2.1.9L18 19l-.9-2.1L15 16l2.1-.9z"/></svg>
-                    </div>
                     <h3>AI Assistant</h3>
                     <p>A built-in AI chat that acts as an agent inside the editor. Describe what you want in plain language and it creates entities, writes and edits Lua or C++ scripts, and builds your project — right where you work.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    </div>
                     <h3>Lua &amp; C++</h3>
                     <p>Use Lua for rapid prototyping and flexible scripting, or C++ for full performance — C++ scripts are compiled at buildtime, not runtime, for maximum efficiency. Combine both seamlessly.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m-7-7h6m6 0h6"/><path d="M5.636 5.636l4.243 4.243m4.243 4.242l4.242 4.243M5.636 18.364l4.243-4.243m4.243-4.242l4.242-4.243"/></svg>
-                    </div>
                     <h3>Entity Component System</h3>
                     <p>Modern ECS with data-driven design at its core. Lean architecture that maximizes CPU cache performance while keeping the engine lightweight, efficient, and straightforward.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    </div>
                     <h3>Cross-Platform</h3>
                     <p>Write once, deploy to 6 platforms. Native support for Windows, Linux, macOS, Android, iOS, and HTML5 with OpenGL, Vulkan, Metal, and DirectX backends.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813h6.15l-4.975 3.615 1.9 5.812L12 14.625l-4.987 3.615 1.9-5.812L3.938 8.813h6.15z"/></svg>
-                    </div>
                     <h3>PBR Rendering</h3>
                     <p>Physically-based rendering with dynamic shadows, global illumination, fog, sky system, and advanced material support for photorealistic visuals.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                    </div>
                     <h3>Physics Engine</h3>
                     <p>Integrated 2D and 3D physics powered by Box2D and Jolt Physics. Rigid bodies, joints, collision detection, and more out of the box.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
-                    </div>
                     <h3>Open Source &amp; Free</h3>
                     <p>MIT licensed, completely free for personal and commercial use. No royalties, no strings attached. Developers who adopt the engine will receive full support, with improvements delivered as quickly as possible.</p>
                 </div>
@@ -496,9 +463,6 @@
 
     <!-- Donate Section -->
     <section class="section donate" id="donate">
-        <div class="donate-bg">
-            <div class="donate-glow"></div>
-        </div>
         <div class="container">
             <div class="donate-content">
                 <div class="donate-text">

@@ -149,9 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Scroll-triggered animations ---
-    const animatedElements = document.querySelectorAll(
-        '.feature-card, .download-card, .highlight-item, .gallery-item, .section-header'
-    );
+    const animatedElements = document.querySelectorAll('.section-header');
 
     animatedElements.forEach(el => el.classList.add('fade-in-up'));
 
@@ -168,19 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     animatedElements.forEach(el => observer.observe(el));
-
-    // --- Stagger animation delays for grids ---
-    function addStaggerDelay(selector) {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach((el, i) => {
-            el.style.animationDelay = `${i * 0.08}s`;
-        });
-    }
-
-    addStaggerDelay('.feature-card');
-    addStaggerDelay('.download-card');
-    addStaggerDelay('.gallery-item');
-    addStaggerDelay('.highlight-item');
 
     // --- Smooth scroll for anchor links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
