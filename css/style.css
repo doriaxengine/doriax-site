@@ -580,7 +580,7 @@ a:hover {
     overflow: hidden;
     border: 1px solid var(--border-color);
     background: var(--bg-card);
-    aspect-ratio: 16 / 9.5;
+    aspect-ratio: 16 / 9;
 }
 
 .editor-preview-image {
@@ -1373,10 +1373,6 @@ a:hover {
     .editor-tab {
         font-size: 0.8rem;
         padding: 8px 16px;
-    }
-
-    .editor-preview {
-        aspect-ratio: 16 / 11;
     }
 
     .footer-grid {
