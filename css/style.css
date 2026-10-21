@@ -636,6 +636,73 @@ a:hover {
 }
 
 /* ==============================
+   Example Games
+   ============================== */
+.examples {
+    background: var(--bg-secondary);
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.example-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color var(--transition);
+}
+
+.example-card:hover {
+    border-color: var(--border-hover);
+}
+
+.example-image {
+    display: block;
+    aspect-ratio: 16 / 9;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.example-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.example-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 24px;
+}
+
+.example-info h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.example-genre {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.example-links {
+    display: flex;
+    gap: 8px;
+}
+
+.example-links .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* ==============================
    Gallery
    ============================== */
 .gallery {
@@ -1363,6 +1430,10 @@ a:hover {
     }
 
     .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .examples-grid {
         grid-template-columns: 1fr;
     }
 
